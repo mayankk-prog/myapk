@@ -4,8 +4,8 @@ package com.example.myapk
 object DataObject {
     var listdata = mutableListOf<CardInfo>()
 
-    fun setData(title: String, priority: String) {
-        listdata.add(CardInfo(title, priority))
+    fun setData(title: String, description: String) {
+        listdata.add(CardInfo(title, description))
     }
 
     fun getAllData(): List<CardInfo> {
@@ -24,10 +24,10 @@ object DataObject {
         listdata.removeAt(pos)
     }
 
-    fun updateData(pos:Int,title:String,priority:String)
+    fun updateData(pos:Int,title:String,description:String)
     {
         listdata[pos].title=title
-        listdata[pos].priority=priority
+        listdata[pos].description=description
     }
 
 }
